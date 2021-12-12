@@ -1,0 +1,307 @@
+/*Main Table*/
+.mainTable {
+
+    font-weight: bold !important;
+    max-height: 92vh;
+}
+
+.dropdownMedicineTable{
+
+    margin-top: 3vh !important;
+
+}
+
+.filterAccordion {
+    max-height: 88vh;
+    width: 13vw;
+    scrollbar-width: none;
+    overflow-y: scroll;
+}
+
+.accordion::-webkit-scrollbar {
+    display: none;
+}
+
+/*Main Table*/
+
+option:checked {
+    background: linear-gradient(#494848,#494848);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #494848;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px black;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(20px);
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+
+    border-color: transparent !important;
+    background-color: #494848 !important;
+
+}
+
+.checkbox:checked:after{
+    background: linear-gradient(#494848,#494848);
+}
+
+.card-header{
+    background-color: white !important;
+}
+
+.bottomLine {
+    height: 5px;
+    color: gray;
+    background-color: gray
+}
+
+div.hiddenScrollBar {
+    overflow: hidden;
+}
+
+div.hiddenScrollBar:hover {
+    overflow-y: auto;
+}
+
+.modal-header {
+    height: 3.3rem;
+}
+
+.modal-title {
+    margin-left: 0.93rem;
+}
+
+.modal-content {
+    font-size: small;
+    border-radius: 0 !important;
+    /*width: 25rem !important;*/
+    /*width: 70vw !important;*/
+    opacity: 0.94 !important;
+}
+
+.card-header {
+    height: 3.3rem;
+}
+
+.card-title {
+    margin-left: 0.8rem;
+}
+
+.card {
+    font-size: small !important;
+    border-radius: 0 !important;
+    background-color: white !important;
+}
+
+.editCard {
+    width: 95vw;
+    min-width:max-content !important;
+}
+
+.editContainer{
+    margin-left: 0.93rem!important;
+}
+
+.loginCard {
+    margin-top: 15vh !important;
+    width: 22vw !important;
+}
+
+.submitForm {
+    margin-left: 0.93rem;
+    margin-top: 1rem;
+    height: 1rem;
+}
+
+.list-group {
+    border-radius: 0 !important;
+}
+
+.hidden {
+    display: none;
+}
+
+.bGround {
+    background-image: url("../media/58537.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-width:1000px!important;
+    /*min-width:max-content !important;*/
+
+}
+
+i {
+    color: #000000;
+}
+
+a {
+    color: #000000 !important;
+}
+
+.breadcrumb-href {
+    color: white !important;
+}
+
+.breadcrumb-item.active {
+    color: black !important;
+}
+
+.btn-link {
+    color: black !important;
+}
+
+.myNavBar {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.smallText {
+    font-size: small !important;
+}
+
+.custom-select {
+    border-radius: 0 !important;
+}
+
+.form-control {
+    border-radius: 0 !important;
+}
+
+.input-group-text {
+    border-radius: 0 !important;
+}
+
+.custom-file-label {
+    border-radius: 0 !important;
+}
+
+.breadcrumb {
+    background-color: transparent !important;
+    border: none !important;
+    padding: 2px 15px !important;
+    width: 25rem;
+}
+
+.scrollWindow {
+    max-height: 63vh;
+    overflow-y: scroll;
+}
+
+.scrollTreatment {
+    max-height: 74vh;
+    overflow-y: scroll;
+    font-size: small;
+}
+
+/*Calf edit*/
+.calfEditTabs {
+    margin-top: 2rem;
+}
+
+.calfEditTabs li:not(:last-child) {
+    margin-right: 7px;
+}
+
+.calfEditTabs a {
+    position: relative;
+    top: 4px;
+    padding: 10px 25px;
+    background: white;
+    color: black;
+    opacity: 0.7;
+    transition: all 0.1s ease-in-out;
+    margin-bottom: 10%;
+}
+
+.calfEditTabs a.active,
+.calfEditTabs a:hover {
+    opacity: 1;
+    top: 0;
+}
+
+.calfEdit {
+    max-height: 74vh;
+    overflow-y: scroll;
+}
+
+.tableFixHead {
+    overflow-y: auto;
+}
+
+.tableFixHead thead th {
+    position: sticky;
+    top: 0;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: small;
+}
+
+th {
+    background: white;
+}
+
+.btn {
+    border-radius: 0 !important;
+}
+
+.fileImage {
+    width: 50px;
+}
+
+.fileName {
+    word-wrap: break-word;
+
+}
+
+.fileCard:hover .deleteFileButton {
+    display: inline-block;
+}

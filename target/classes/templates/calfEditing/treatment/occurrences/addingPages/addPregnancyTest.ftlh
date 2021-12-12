@@ -1,0 +1,152 @@
+<div class="modal fade smallText" id="pregnancyTestModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Add Pregnancy Test</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <form method="post" action="/addOccurrence" enctype="multipart/form-data">
+
+                        <div class="container">
+
+                            <div class="form-group">
+                                <label for="pregnancyTestModalDate">Date</label>
+                                <input type="date" required
+                                       value="${aDate?string.iso}"
+                                       data-date-format=yyyy-MM-dd" class="form-control form-control-sm date"
+                                       name="date">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="pregnant">Pregnant</label>
+                                <select class="custom-select custom-select-sm" name="pregnant" id="pregnant">
+
+                                    <#list pregnantState as ps>
+                                        <option value="${ps}">${ps.getText()}</option>
+                                    </#list>
+
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="method">Method</label>
+                                <select class="custom-select custom-select-sm" name="method" id="method">
+
+                                    <#list pregnancyMethod as pm>
+                                        <option value="${pm}">${pm.getText()}</option>
+                                    </#list>
+
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+
+                                <label for="insemination">Insemination</label>
+
+                                <select class="custom-select custom-select-sm" id="insemination"
+                                        name="insemination">
+
+                                    <#list inseminationListForPregnancy as i>
+                                        <option value="${i.id}">${i.inseminationToString()}</option>
+                                    </#list>
+                                    <option value="-1">None</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+
+                                <label for="OEIList">Occurrence extra info</label>
+                                <span>
+                                        <i type="button" class="fas fa-plus" id="addPregnancyTestOEI"></i>
+                                    </span>
+                                <select class="custom-select custom-select-sm"
+                                        multiple="multiple"
+                                        name="OEIList"
+                                        id="OEIList">
+
+                                    <#if pregnancyTestOEI?has_content>
+
+                                        <#list pregnancyTestOEI as conditionScoreExtra>
+                                            <option value="${conditionScoreExtra.getId()}">${conditionScoreExtra.getName()}</option>
+                                        </#list>
+
+                                    <#else>
+
+                                        <option value="-1"> No Data for this occurrence</option>
+
+                                    </#if>
+
+                                </select>
+
+                            </div>
+
+                            <div id="pregnancyTestOEIPanel" class="hidden">
+
+                                <div class="form-group">
+
+                                    <label for="name">Name</label>
+                                    <input type="text"
+                                           class="form-control form-control-sm noSpace"
+                                           id="name"
+                                           name="name">
+                                </div>
+
+                                <div class="form-group">
+
+                                    <label for="commentary">Commentary</label>
+                                    <textarea class="form-control form-control-sm noSpace"
+                                              name="commentary"
+                                              id="commentary"
+                                              rows="1"></textarea>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <label>Files</label>
+                                <div class="custom-file">
+                                    <input type="file"
+                                           multiple
+                                           id="customFile"
+                                           name="files"
+                                           class="custom-file-input form-control-sm">
+                                    <label class="custom-file-label col-form-label-sm"
+                                           for="customFile">Choose
+                                        file</label>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="form-group submitForm">
+                            <button type="submit"
+                                    class="btn btn-outline-secondary btn-sm">Accept
+                            </button>
+                        </div>
+
+                        <input type="hidden" name="calf" value="${calf.id}">
+                        <input type="hidden" name="occurrenceType" value="PREGNANCY_TEST">
+                        <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    $("#addPregnancyTestOEI").click(function () {
+
+        $("#pregnancyTestOEIPanel").slideToggle(100);
+
+        $('#addPregnancyTestOEI').toggleClass("fas fa-plus");
+        $('#addPregnancyTestOEI').toggleClass("fas fa-minus");
+
+    })
+
+</script>

@@ -1,0 +1,94 @@
+.medicineIcon span {
+    margin-left: 3vw;
+}
+
+.editIcon span {
+    margin-left: 0.8vw;
+}
+
+.extraInfoIcon span {
+    margin-left: 3vw;
+}
+
+.deleteIcon span {
+    margin-left: 3vw;
+}
+
+.fileIcon span {
+    margin-left: 3vw;
+}
+
+.big-icon i {
+    font-size: 1.3rem;
+}
+
+.treatmentCard {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+    border-width: 0.8rem !important;
+    border-top-style: solid !important;
+    border-bottom-style: none !important;
+    border-left-style: none !important;
+    border-right-style: none !important;
+}
+
+.CASTRATION_DEHORNING {
+    border-top-color: #DEB887 !important;
+}
+
+.ACCIDENT_ILLNESS {
+    border-top-color: #8B0000 !important;
+}
+
+.CALVING {
+    border-top-color: #228B22 !important;
+}
+
+.PROPHYLACTIC {
+    border-top-color: #FF7F50 !important;
+}
+
+.CONDITION_SCORE {
+    border-top-color: #00BFFF !important;
+}
+
+.TEMPERAMENT {
+    border-top-color: #0000CD !important;
+}
+
+.DRYING_OFF {
+    border-top-color: #FFA500 !important;
+}
+
+.FOOT_BATH {
+    border-top-color: #FF0000 !important;
+}
+
+.HOOF_CARE {
+    border-top-color: #FF4500 !important;
+}
+
+.INSEMINATION {
+    border-top-color: #FFFF00 !important;
+}
+
+.DEATH {
+    border-top-color: #000000 !important;
+}
+
+.MILK_YIELD {
+    border-top-color: #FFFFF0 !important;
+}
+
+.PREGNANCY_TEST {
+    border-top-color: #FFD700 !important;
+}
+
+.SELL {
+    border-top-color: #696969 !important;
+}
+
+.WEANING {
+    border-top-color: #A0522D !important;
+}
+
